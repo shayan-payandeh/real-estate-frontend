@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Vazir;
+  src: url('/fonts/vazir/Vazirmatn-Medium.woff2');
+  /* url('/public/fonts/vazir/Vazirmatn-Bold.woff2'),
+    url('/public/fonts/vazir/Vazirmatn-ExtraBold.woff2'),
+    url('/public/fonts/vazir/Vazirmatn-Medium.woff2'),
+    url('/public/fonts/vazir/Vazirmatn-Regular.woff2'); */
+  font-style: normal;
+  font-weight: 400;
+}
+
+@layer base {
+  :root {
+    --background-app-rgb: 244, 245, 247;
+
+    --color-primary-500: 102, 66, 41;
+    --color-primary-400: 152, 117, 84;
+    --color-primary-300: 185, 153, 118;
+    --color-primary-200: 229, 211, 179;
+    --color-primary-100: 229, 211, 179;
+    --color-primary-50: 255, 251, 245;
+
+    /* --color-secondary-900: 42, 45, 83;
+    --color-secondary-800: 63, 66, 100;
+    --color-secondary-700: 85, 87, 117;
+    --color-secondary-600: 106, 108, 135;
+    --color-secondary-500: 127, 129, 152;
+    --color-secondary-400: 148, 150, 169;
+    --color-secondary-300: 170, 171, 186;
+    --color-secondary-200: 191, 192, 203;
+    --color-secondary-100: 212, 213, 221;
+    --color-secondary-50: 223, 223, 229; */
+
+    --color-success: 0, 192, 115;
+    --color-warning: 255, 153, 0;
+    --color-error: 248 113 113;
+    --color-red-500: 239, 68, 68;
+    --color-red-300: 252, 165, 165;
+  }
+}
+
+@layer components {
+  .table__header {
+    @apply bg-slate-600 text-slate-50;
+  }
+
+  .textField__input {
+    @apply text-[12px] w-[200px] py-1 px-3 rounded-lg bg-slate-200 text-secondary-900 border border-slate-400 outline-none duration-200 transition-all ease-in-out hover:border-slate-700 focus:outline-none focus:border-slate-800 focus:shadow-md focus:shadow-slate-400;
+  }
+
+  .textArea__input {
+    @apply text-sm w-[100%] py-1 px-3 rounded-lg bg-slate-200 text-secondary-900 border border-slate-400 outline-none duration-200 transition-all ease-in-out hover:border-slate-700 focus:outline-none focus:border-slate-800 focus:shadow-md focus:shadow-slate-400;
+  }
+
+  .btn {
+    @apply px-1 py-2 rounded-lg transition-all duration-300 text-title;
+  }
+
+  .btn--primary {
+    @apply bg-slate-700 text-white hover:brightness-[.9] shadow-md shadow-gray-400;
+  }
+
+  .table__th {
+    @apply border-b-2 border-b-gray-500 font-medium p-3 pr-8 pb-3 text-right;
+  }
+
+  .table__td {
+    @apply border-b border-b-gray-300 p-3 pr-8 pb-3 text-right;
+  }
+
+  .icon {
+    @apply w-5 h-5;
+  }
+
+  .icon__delete {
+    @apply text-red-400;
+  }
+
+  .icon__edit {
+    @apply text-slate-400;
+  }
+
+  .icon__view {
+    @apply text-slate-700;
+  }
+
+  .textField__input_main {
+    @apply text-[12px] w-[200px] py-1 px-3 bg-primary-50 rounded-lg outline-none text-black border border-primary-300 duration-200 transition-all ease-in-out hover:border-primary-400 focus:outline-none focus:shadow-sm focus:shadow-primary-400 focus:border-primary-400;
+  }
+
+  .textArea__input_main {
+    @apply text-sm w-[100%] py-1 px-3 rounded-lg bg-primary-50 text-secondary-900 border border-primary-300 outline-none duration-200 transition-all ease-in-out hover:border-primary-400 focus:outline-none focus:border-primary-400 focus:shadow-sm focus:shadow-primary-400;
+  }
+
+  .btn_main {
+    @apply px-1 py-2 rounded-lg transition-all duration-300 text-title;
+  }
+
+  .btn--primary_main {
+    @apply bg-primary-300 text-white hover:brightness-[.9] shadow-md shadow-gray-400;
+  }
+
+  .btn--secondary_main {
+    @apply text-primary-300 bg-white hover:brightness-[.9] border border-primary-300;
+  }
+
+  .accordion-content {
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+  }
+
+  .text-label {
+    color: #888888;
+  }
+
+  .font-number {
+    font-family: Vazir;
+  }
+
+  .dynamicIcon {
+    @apply text-[1.25rem] sm:text-[1.35rem] md:text-[1.45rem];
+  }
+
+  @keyframes fadeAnimation {
+    from {
+      @apply opacity-0;
+    }
+
+    to {
+      @apply opacity-100;
+    }
+  }
+
+  .fadeAnimate {
+    animation: fadeAnmation ease-in-out 2s;
+  }
+
+  /* .text-secondary-size {
+    font-size: clamp(0.85rem, 0.8142rem + 0.1791vw, 1rem);
+  } */
+}
+
+html,
+body {
+  direction: rtl;
+  padding: 0;
+  margin: 0;
+  font-family: Vazir;
+  min-height: 100vh;
+  user-select: none;
+  background-color: var(--background-app-rgb);
+}
