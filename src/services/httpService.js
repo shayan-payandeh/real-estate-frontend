@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const app = axios.create({
-  baseURL: 'https://api.hormozganfile.info/',
-  withCredentials: true,
+  baseURL: 'https://api.hormozganfile.info',
+  // withCredentials: true,
 });
 
 app.interceptors.request.use(
