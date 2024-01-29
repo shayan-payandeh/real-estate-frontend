@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const app = axios.create({
   baseURL: 'https://api.hormozganfile.info',
-  // withCredentials: true,
+  withCredentials: true,
 });
 
 app.interceptors.request.use(
