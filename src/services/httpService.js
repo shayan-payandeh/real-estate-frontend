@@ -6,7 +6,7 @@ const app = axios.create({
 });
 
 app.interceptors.request.use(
-  (res) => res,
+  (response) => response,
   (err) => Promise.reject(err)
 );
 
