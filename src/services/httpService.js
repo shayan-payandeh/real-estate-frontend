@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const app = axios.create({
-  baseURL: 'https://api.hormozganfile.info/',
+  baseURL: process.env.NEXT_PUBLIC_API_URL,
   withCredentials: true,
 });
 
